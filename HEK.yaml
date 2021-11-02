@@ -1,0 +1,59 @@
+project:HEK293T
+sequence_files:
+  file1:
+    name: /nfs02data1/home/xuwanxing/smartseq3/human/Smartseq3.HEK.fwdprimer.read1.fastq.gz
+    base_definition:
+      - cDNA(23-75)
+      - UMI(12-19)
+    find_pattern: ATTGCGCAATG
+  file2:
+    name: /nfs02data1/home/xuwanxing/smartseq3/human/Smartseq3.HEK.fwdprimer.index1.fastq.gz
+    base_definition:
+      - BC(1-8)
+  file3:
+    name: /nfs02data1/home/xuwanxing/smartseq3/human/Smartseq3.HEK.fwdprimer.index2.fastq.gz
+    base_definition:
+      - BC(1-8)
+reference:
+  STAR_index: /Software/Packages/STAR/STAR-2.7.9a-Index/human/GRCh38/
+  GTF_file: /nfs01data1/Ref-old/GRCh38/Homo_sapiens.GRCh38.104.gtf
+  exon_extension: no
+  extension_length: 0
+  scaffold_length_min: 0
+  additional_files:
+  additional_STAR_params: '--limitSjdbInsertNsj 2000000 --outFilterIntronMotifs --RemoveNoncanonicalUnannotated --clip3pAdapterSeq CTGTCTCTTATACACATCT'
+out_dir: /nfs02data1/home/xuwanxing/smartseq3/human/
+num_threads: 10
+mem_limit: null
+filter_cutoffs:
+  BC_filter:
+    num_bases: 3
+    phred: 20
+  UMI_filter:
+    num_bases: 2
+    phred: 20
+barcodes:
+  barcode_num: null
+  barcode_file: /nfs02data1/home/xuwanxing/smartseq3/human/Smartseq3.HEK.fwdprimer.sample_annotation.txt
+  barcode_sharing: null
+  automatic: no
+  BarcodeBinning: 1
+  nReadsperCell: 100
+  demultiplex: no
+counting_opts:
+  introns: yes
+  intronProb: no
+  downsampling: 0
+  strand: 0
+  Ham_Dist: 1
+  velocyto: no
+  primaryHit: yes
+  multi_overlap: no
+  fraction_overlap: 0
+  twoPass: no
+make_stats: yes
+which_Stage: Filtering
+samtools_exec: samtools
+Rscript_exec: Rscript
+STAR_exec: STAR
+pigz_exec: pigz
