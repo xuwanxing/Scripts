@@ -1,4 +1,4 @@
-project:HEK293T
+project: HEK293T
 sequence_files:
   file1:
     name: /nfs02data1/home/xuwanxing/smartseq3/human/Smartseq3.HEK.fwdprimer.read1.fastq.gz
