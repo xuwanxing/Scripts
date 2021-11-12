@@ -38,7 +38,7 @@ counting_opts:
   introns: yes
   downsampling: '0'
   strand: 0
-  Ham_Dist: 0
+  Ham_Dist: 1
   velocyto: no
   primaryHit: yes
   twoPass: no
