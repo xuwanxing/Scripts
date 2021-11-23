@@ -15,11 +15,11 @@ gc <- get_gc(ref_raw, hgref = "mm10")
 values(ref_raw) <- cbind(values(ref_raw), DataFrame(gc, mapp))
 ref_raw
 
-coverageObj <- get_coverage_scDNA(bambedObj, mapqthres = 40,     》》》用时长
+coverageObj <- get_coverage_scDNA(bambedObj, mapqthres = 40,
                                 seq = 'paired-end', hgref = "mm10")
 Y_raw <- coverageObj$Y
 
-QCmetric_raw <- get_samp_QC(bambedObj)   》》》 用时长
+QCmetric_raw <- get_samp_QC(bambedObj)
 qcObj <- perform_qc(Y_raw = Y_raw, 
     sampname_raw = sampname_raw, ref_raw = ref_raw, 
     QCmetric_raw = QCmetric_raw)
