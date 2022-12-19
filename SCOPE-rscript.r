@@ -1,3 +1,4 @@
+#test
 library(SCOPE)
 library(BSgenome.Mmusculus.UCSC.mm10)
 bamFile <- list.files('/nfs02data1/home/xuwanxing/test/cnv/SCOPE/dedup', pattern = '*.dedup.bam$')
